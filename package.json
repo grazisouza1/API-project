@@ -1,7 +1,7 @@
 {
   "name": "aula04_api-dw2",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm init -y\r     npm i -D typescript ts-node @types/node\r     npx tsc --init\r     npm i express\r     npm i -D @types/express\r     npm install -D prisma\r     npx prisma init",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,6 +22,9 @@
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
-    "express": "^4.21.0"
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "express": "^4.21.1",
+    "sqlite": "^5.1.1"
   }
 }

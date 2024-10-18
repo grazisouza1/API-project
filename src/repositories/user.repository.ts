@@ -24,3 +24,7 @@ export const findUserById = async (id: number) => {
 export const updateUser = async (id: number, data: CreateUserDTO) => {
     return User.update({where: {id}, data})
 }
+
+export const findUserByIdWithTasks = async (id: number) => {
+    return User.findFirst({ where: {id}, include: {tasks: true} })
+}

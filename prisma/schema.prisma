@@ -18,4 +18,15 @@ model User {
   name String 
   email String @unique //Não podem ser cadastrado emails repetidos
   password String 
+  tasks Task[]
 }
+
+model Task {
+  id Int @id @default(autoincrement())
+  title String
+  completed Boolean @default(false)
+  userId Int 
+  user User @relation(fields: [userId], references: [id])
+}
+
+//npx prisma db push -  faz uma relação entre o banco e o esquema do prisma
